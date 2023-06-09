@@ -1,6 +1,8 @@
 package org.launchcode.techjobs.persistent.models;
 
 import javax.persistence.*;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Job{
@@ -11,6 +13,9 @@ public class Job{
 
     private String name;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @Valid
+    @NotNull
     private String employer;
     private String skills;
 
