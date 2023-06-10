@@ -13,10 +13,11 @@ public class Job{
 
     private String name;
 
-    @OneToOne(cascade = CascadeType.ALL)
+//    @OneToOne(cascade = CascadeType.ALL)
     @Valid
     @NotNull
     private String employer;
+
     private String skills;
 
     public Job() {
